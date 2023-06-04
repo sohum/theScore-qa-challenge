@@ -6,6 +6,6 @@ class LoginSteps(object):
         self.welcome_page = welcome_page
         self.login_page = login_page
 
-    def login(self, email, password):
+    def login(self):
         self.welcome_page.login()
-        self.login_page.login_with_email(email, password)
+        self.login_page.login_with_email()

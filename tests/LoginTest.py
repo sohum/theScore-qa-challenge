@@ -13,4 +13,4 @@ def login_steps(driver):
 class TestLogin(BaseTest):
     def test_login(self, login_steps):
         login_steps\
-            .login("", "")
+            .login()
