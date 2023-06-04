@@ -38,3 +38,10 @@ class BasePage(object):
 
     def tap_modal_x(self):
         self.defaultWait.until(EC.visibility_of_element_located(self.dismiss_modal)).click()
+
+    def is_displayed(self, locator):
+        try:
+            self.defaultWait.until(EC.visibility_of_element_located(locator))
+            return True
+        except Exception as e:
+            return False
