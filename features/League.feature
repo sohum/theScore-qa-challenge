@@ -4,5 +4,5 @@ Feature: League page and sub-tab navigation
     Given the user is on the Favorites page
 
   Scenario: Navigate to a league page
-    When the user selects a favorited league
-    Then the user lands on the correct league page
+    When the user selects the "ENG" favorited league
+    Then the user lands on the "England Soccer" league page
