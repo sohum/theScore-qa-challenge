@@ -1,5 +1,3 @@
-import time
-
 from pages.BasePage import BasePage
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.support import expected_conditions as EC

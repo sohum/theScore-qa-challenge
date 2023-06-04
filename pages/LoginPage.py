@@ -1,6 +1,6 @@
 from pages.BasePage import BasePage
 from appium.webdriver.common.appiumby import AppiumBy
-import json
+import json, os
 
 class LoginPage(BasePage):
 
@@ -12,8 +12,11 @@ class LoginPage(BasePage):
         super(LoginPage, self).__init__(driver)
 
     def login_with_email(self):
+        absolute_path = os.path.dirname(__file__)
+        secrets_relative_path = '../secrets.js'
+        secrets_full_path = os.path.join(absolute_path, secrets_relative_path)
         try:
-            with open('../secrets.js') as f:
+            with open(secrets_full_path) as f:
                 data = json.load(f)
                 email = data['email']
                 password = data['password']
