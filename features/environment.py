@@ -4,6 +4,7 @@ from pages.LeaguePage import LeaguePage
 from pages.LoginPage import LoginPage
 from pages.WelcomePage import WelcomePage
 from pages.components.BottomNav import BottomNav
+from pages.components.Toolbar import Toolbar
 from behave import fixture, use_fixture
 
 
@@ -20,3 +21,4 @@ def before_scenario(context, scenario):
     context.bottom_nav = BottomNav(context.driver)
     context.favorites_page = FavoritesPage(context.driver)
     context.league_page = LeaguePage(context.driver)
+    context.toolbar = Toolbar(context.driver)
