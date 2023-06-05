@@ -45,3 +45,11 @@ class BasePage(object):
             return True
         except Exception as e:
             return False
+
+    def is_selected(self, locator):
+        is_selected = True
+        try:
+            self.defaultWait.until(EC.element_located_selection_state_to_be(locator, is_selected))
+            return is_selected
+        except:
+            return is_selected
