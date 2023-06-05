@@ -1,3 +1,5 @@
+from selenium.webdriver.support.wait import WebDriverWait
+
 from pages.BasePage import BasePage
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.support import expected_conditions as EC
@@ -14,5 +16,6 @@ class FavoritesPage(BasePage):
         return self.is_displayed(self.chips)
 
     def select_chip(self, chip_name):
-        self.defaultWait.until(EC.visibility_of_element_located(
+        wait = WebDriverWait(self.driver, 15)
+        wait.until(EC.visibility_of_element_located(
             (AppiumBy.XPATH, "//android.widget.TextView[@text = \"{}\"]/parent::android.view.ViewGroup".format(chip_name)))).click()
