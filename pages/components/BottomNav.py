@@ -4,10 +4,9 @@ from appium.webdriver.common.appiumby import AppiumBy
 
 class BottomNav(BasePage):
 
-    favorites_btn = (AppiumBy.ACCESSIBILITY_ID, 'Favorites')
-
     def __init__(self, driver):
         super(BottomNav, self).__init__(driver)
 
-    def favorites(self):
-        self.tap(self.favorites_btn)
+    def tab(self, tab_name):
+        tab = (AppiumBy.ACCESSIBILITY_ID, "{}".format(tab_name))
+        self.tap(tab)

@@ -1,7 +1,7 @@
 Feature: League page and sub-tab navigation
   Background:
     Given the user is logged in
-    Given the user is on the Favorites tab
+    Given the user is on the "Favorites" tab
 
   Scenario: Navigate to a league page
     When the user selects the "ENG" favorited league

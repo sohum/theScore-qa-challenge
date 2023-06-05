@@ -3,9 +3,9 @@ from behave import given, when, then
 
 class FavoritesSteps(object):
 
-    @given('the user is on the Favorites tab')
-    def go_to_tab(context):
-        context.bottom_nav.favorites()
+    @given('the user is on the "{tab_name}" tab')
+    def go_to_tab(context, tab_name):
+        context.bottom_nav.tab(tab_name)
 
     @when('the user selects the "{chip_name}" favorited league')
     @given('the user is on the "{chip_name}" league page')
