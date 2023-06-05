@@ -9,4 +9,4 @@ class BottomNav(BasePage):
 
     def tab(self, tab_name):
         tab = (AppiumBy.ACCESSIBILITY_ID, "{}".format(tab_name))
-        self.tap(tab)
+        self.tap(tab, 15)
