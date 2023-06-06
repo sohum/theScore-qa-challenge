@@ -5,7 +5,7 @@ This repo is a submission for theScore's QA Challenge, using Python, Behave, and
 
 ## Prerequisites
 - [Python 3.9+](https://www.python.org/downloads/release/python-396/)
-- Appium 2.0
+- Appium 2.x
   - Requires [Node](https://nodejs.org/en/download), npm
     ```bash
     # Install Appium 2.0
@@ -39,6 +39,9 @@ In the project's root directory, run
 ```bash
     # To run all tests
     $ behave
+    
+    # To run a specific scenario
+    $ behave -n 'Navigate to a league table'
 ```
 
 ## Documentation
