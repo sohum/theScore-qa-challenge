@@ -1,6 +1,8 @@
 # theScore QA Challenge
 This repo is a submission for theScore's QA Challenge, using Python, Behave, and Appium 2.0.
 
+![leage_table_test](https://github.com/sohum/theScore-qa-challenge/assets/8813530/040c6573-5137-47af-ac54-faab3a46c680)
+
 ## Prerequisites
 - [Python 3.9+](https://www.python.org/downloads/release/python-396/)
 - Appium 2.0
