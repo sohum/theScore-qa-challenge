@@ -22,7 +22,7 @@ def before_scenario(context, scenario):
         context.driver.execute_script("mobile: activateApp", {"appId": "com.fivemobile.thescore"})
 
 def after_scenario(context, scenario):
-    context.driver.execute_script("mobile: terminateApp", {"appId": "com.fivemobile.thescore", "timeout": 3000})
+    context.driver.execute_script("mobile: terminateApp", {"appId": "com.fivemobile.thescore", "timeout": 5000})
 
 def after_all(context):
     context.driver.quit()
